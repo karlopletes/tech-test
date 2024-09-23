@@ -48,14 +48,15 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
-  gem 'rspec-rails'
 end
 
 group :test do
   gem 'database_cleaner-active_record' # Clean test database
+  gem 'shoulda-matchers'
 end
 
 group :development do
