@@ -13,7 +13,7 @@ Studio.destroy_all
 studio_big = Studio.create!(name: 'Very nice studio', description: 'Very big apartment')
 studio_small = Studio.create!(name: 'Super nice studio', description: 'Small apartment')
 
-puts 'Studios seeded successfully'
+Rails.logger.debug 'Studios seeded successfully'
 
 # Create stays for studio_big
 Stay.create!(studio: studio_big, start_date: '2024-01-01', end_date: '2024-01-08')
@@ -24,4 +24,4 @@ Stay.create!(studio: studio_small, start_date: '2024-01-05', end_date: '2024-01-
 Stay.create!(studio: studio_small, start_date: '2024-01-15', end_date: '2024-01-20')
 Stay.create!(studio: studio_small, start_date: '2024-01-21', end_date: '2024-01-25')
 
-puts 'Stays seeded successfully'
+Rails.logger.debug 'Stays seeded successfully'

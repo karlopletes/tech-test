@@ -2,12 +2,12 @@
 
 require 'rails_helper'
 
-RSpec.describe Stay, type: :model do
-  context 'associations' do
+RSpec.describe Stay do
+  context 'with associations' do
     it { is_expected.to belong_to(:studio) }
   end
 
-  context 'validations' do
+  context 'with validations' do
     let(:stay) { build(:stay) }
 
     it 'is invalid without an start date' do

@@ -2,8 +2,8 @@
 
 require 'rails_helper'
 
-RSpec.describe Studio, type: :model do
-  context 'associations' do
+RSpec.describe Studio do
+  context 'with associations' do
     it { is_expected.to have_many(:stays).dependent(:destroy) }
   end
 end
