@@ -13,19 +13,18 @@ RSpec.describe 'Api::V1::Absences' do
         # expect(response).to have_http_status(:ok)
         json_response = response.parsed_body
         expect(json_response).to contain_exactly(
-          ["absences", [{
+          ['absences', [{
             'studio_id' => 1,
             'studio_name' => 'Studio1',
             'start_date' => '2024-01-11',
             'end_date' => '2024-01-14'
           },
-          {
-            'studio_id' => 2,
-            'studio_name' => 'Studio2',
-            'start_date' => '2024-01-11',
-            'end_date' => '2024-01-14'
-          }]
-        ]
+                        {
+                          'studio_id' => 2,
+                          'studio_name' => 'Studio2',
+                          'start_date' => '2024-01-11',
+                          'end_date' => '2024-01-14'
+                        }]]
         )
       end
     end

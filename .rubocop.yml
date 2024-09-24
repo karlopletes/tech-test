@@ -8,4 +8,19 @@ require:
   - rubocop-factory_bot
 
 AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'test/**/*'
+  TargetRubyVersion: 3.2
   NewCops: enable
+
+Style/Documentation:
+  Exclude:
+    - 'app/mailers/**/*'
+    - 'app/models/**/*'
+    - 'config/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe AbsenceCalculator, type: :service do
   fixtures :studios, :stays
 
+  subject(:absence_calculator) { described_class.new(studio) }
+
   let(:studio) { studios(:studio1) }
   let(:absences) { absence_calculator.calculate_absences }
-
-  subject(:absence_calculator) { described_class.new(studio) }
 
   describe '#calculate_absences' do
     context 'when stays exist with absences' do
@@ -24,7 +24,7 @@ RSpec.describe AbsenceCalculator, type: :service do
 
     context 'when there are no absences' do
       before do
-        create(:stay, studio: studio, start_date: '2024-01-10', end_date: '2024-01-15')
+        create(:stay, studio:, start_date: '2024-01-10', end_date: '2024-01-15')
       end
 
       it 'returns an empty array' do

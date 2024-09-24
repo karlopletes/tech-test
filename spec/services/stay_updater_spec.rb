@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe StayUpdater, type: :service do
   fixtures :studios, :stays
 
-  let(:studio1) { studios(:studio1) }
-  let(:studio2) { studios(:studio2) }
-  let(:results) { stay_updater.update_stays }
-
   subject(:stay_updater) { described_class.new(absences) }
+
+  let(:studio_one) { studios(:studio1) }
+  let(:studio_two) { studios(:studio2) }
+  let(:results) { stay_updater.update_stays }
 
   describe '#update_stays' do
     context 'when a studio does not exist' do
@@ -41,10 +41,10 @@ RSpec.describe StayUpdater, type: :service do
         )
 
         # 1 existing stay + 2 new stays after split
-        expect(studio1.stays.count).to eq(3)
+        expect(studio_one.stays.count).to eq(3)
 
         # 1 existing stay + 1 updated stay
-        expect(studio2.stays.count).to eq(2)
+        expect(studio_two.stays.count).to eq(2)
       end
     end
 
@@ -69,7 +69,7 @@ RSpec.describe StayUpdater, type: :service do
         results
 
         # One stay should be destroyed
-        expect(studio1.stays.count).to eq(1)
+        expect(studio_one.stays.count).to eq(1)
       end
     end
 
