@@ -1,0 +1,19 @@
+stay1:
+  studio_id: 1
+  start_date: "2024-01-01"
+  end_date: "2024-01-10"
+
+stay2:
+  studio_id: 1
+  start_date: "2024-01-15"
+  end_date: "2024-01-20"
+
+stay3:
+  studio_id: 2
+  start_date: "2024-01-05"
+  end_date: "2024-01-10"
+
+stay4:
+  studio_id: 2
+  start_date: "2024-01-15"
+  end_date: "2024-01-18"

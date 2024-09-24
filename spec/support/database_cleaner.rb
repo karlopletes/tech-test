@@ -1,3 +1,4 @@
+# clean the database so we have a clean state in tests
 RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.clean_with :truncation
